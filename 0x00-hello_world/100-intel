@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -miamcu -m32 $CFILE
+gcc -S -m32 -miamcu $CFILE
