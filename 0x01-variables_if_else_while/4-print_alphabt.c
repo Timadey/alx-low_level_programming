@@ -14,7 +14,7 @@ int main(void)
 	/* Body */
 	for (i = 0; i < 26; i++)
 	{
-		if (letter != 'e' || letter != 'q')
+		if (letter != 'e' && letter != 'q')
 		{
 			putchar(letter);
 		};
