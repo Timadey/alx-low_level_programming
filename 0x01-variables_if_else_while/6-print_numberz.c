@@ -8,7 +8,7 @@
 int main(void)
 {
 	/* Declaration */
-	char num = '0';
+	int num = 48;
 	int i;
 
 	/* Body */
