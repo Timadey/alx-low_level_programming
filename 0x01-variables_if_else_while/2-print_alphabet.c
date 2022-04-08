@@ -12,7 +12,7 @@ int main(void)
 	int i;
 
 	/* Body */
-	for (i = 0; i < 25; i++)
+	for (i = 0; i < 26; i++)
 	{
 		putchar (letter);
 		letter++;
