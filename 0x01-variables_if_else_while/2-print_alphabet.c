@@ -7,11 +7,15 @@
  */
 int main(void)
 {
+	/* Declaration */
 	char letter = 'a';
 	int i;
-	for (i = 0; i < 23; i++)
+
+	/* Body */
+	for (i = 0; i < 25; i++)
 	{
 		putchar (letter);
+		letter++;
 	};
 	putchar ('\n');
 	return (0);
