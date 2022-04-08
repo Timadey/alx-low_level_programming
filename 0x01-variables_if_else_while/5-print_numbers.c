@@ -13,8 +13,8 @@ int main(void)
 	/* Body */
 	for (i = 0; i < 10; i++)
 	{
-		printf ("%d", i);
+		printf("%d", i);
 	};
-	printf ("%c", '\n');
+	printf("%c", '\n');
 	return (0);
 }
