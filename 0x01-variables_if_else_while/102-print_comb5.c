@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * main - The starting point of the program
  * Description: Write a program that prints
  * all possible combinations of two two-digit numbers.
