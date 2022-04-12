@@ -1,13 +1,18 @@
 #include "main.h"
 /**
- * main - the starting point of the program
- * Description: Write a function that prints the alphabet,
- *  in lowercase, followed by a new line.
+ * print_alphabet - prints the alphabet, in lowercase
+ * , followed by a new line
  *
- * Return: 0
+ * Return: void
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	char letter = 'a';
+
+	while (letter <= 'z')
+	{
+		_putchar(letter);
+		letter++;
+	};
+	_putchar('\n');
 }
