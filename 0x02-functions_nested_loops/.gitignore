@@ -1,7 +1,6 @@
 *
 !*.c
 *main.c
-_putchar.c
 !*.h
 !Makefile
 !*.md
