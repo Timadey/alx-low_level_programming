@@ -1,4 +1,6 @@
-#include "main.h"
+#ifndef main.h
+#define main.h
+#endif
 /**
  * main - starting point of the program
  * Description: Write a program that
