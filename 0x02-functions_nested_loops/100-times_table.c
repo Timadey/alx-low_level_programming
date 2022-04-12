@@ -9,7 +9,7 @@ void print_times_table(int n)
 {
 if (n > 15 || n < 0)
 {
-
+	_putchar('\n');
 }
 else
 {
@@ -28,27 +28,27 @@ else
 			res = y * count;
 			if (res <= 9)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar (res + '0');
+			_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar (res + '0');
 			}
 			else if (res > 99)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(res / 100 + '0');
-				_putchar((res % 100) / 10 + '0');
-				_putchar((res % 100) % 10 + '0');
+			_putchar(',');
+			_putchar(' ');
+		_putchar(res / 100 + '0');
+			_putchar((res % 100) / 10 + '0');
+			_putchar((res % 100) % 10 + '0');
 			}
 			else
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(res / 10 + '0');
-				_putchar(res % 10 + '0');
+			_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(res / 10 + '0');
+			_putchar(res % 10 + '0');
 			};
 			if (y == n)
 				_putchar('\n');
