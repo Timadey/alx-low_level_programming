@@ -1,7 +1,4 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
-main.h
-#endif
+#include "main.h"
 /**
  * main - starting point of the program
  * Description: Write a program that
