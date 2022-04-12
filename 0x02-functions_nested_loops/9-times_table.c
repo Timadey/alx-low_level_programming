@@ -12,12 +12,12 @@ void times_table(void)
 	{
 		int y = 1;
 		int res = 0;
+
 		_putchar ('0');
 
 		while (y <= 9)
 		{
 			res = y * count;
-			
 			if (res <= 9)
 			{
 				_putchar(',');
