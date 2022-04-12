@@ -17,7 +17,7 @@ void print_to_98(int n)
 			if (n == 98)
 				printf("%c",'\n');
 			else
-				printf("%c%c",', ');
+				printf("%c%c",',',' ');
 			n++;
 		};
 	}
@@ -29,7 +29,7 @@ void print_to_98(int n)
 			if (n == 98)
 				printf("%c",'\n');
 			else
-				printf("%c%c",', ');
+				printf("%c%c",',',' ');
 			n--;
 		};
 	};
