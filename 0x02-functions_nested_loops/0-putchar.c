@@ -1,4 +1,4 @@
-#include "_putchar.c"
+#include "main.h"
 /**
  * main - starting point of the program
  * Description: Write a program that
