@@ -1,4 +1,6 @@
-_putchar.c
-a.out
-main.c
-0-putchar
+*
+*main.c
+!*.c
+!*.h
+!Makefile
+!*.md
