@@ -8,17 +8,17 @@
 
 int main(void)
 {
-	int n1 = 1;
-	int n2 = 2;
+	long int n1 = 1;
+	long int n2 = 2;
 	int term = 0;
 
-	printf("%d%s%d", n1, ", ", n2);
-	while (term < 49)
+	printf("%ld%s%ld", n1, ", ", n2);
+	while (term < 48)
 	{
-		int fibn = n1 + n2;
+		long int fibn = n1 + n2;
 
 		printf("%s", ", ");
-		printf("%d", fibn);
+		printf("%ld", fibn);
 		n1 = n2;
 		n2 = fibn;
 		term++;
