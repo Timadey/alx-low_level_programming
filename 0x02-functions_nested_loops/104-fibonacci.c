@@ -9,17 +9,17 @@
 
 int main(void)
 {
-	long unsigned int n1 = 1;
-	long unsigned int n2 = 2;
+	long int n1 = 1;
+	long int n2 = 2;
 	int term = 0;
 
 	printf("%ld%s%ld", n1, ", ", n2);
-	while (term < 96)
+	while (term < 98)
 	{
-		long unsigned int fibn = n1 + n2;
+		long int fibn = n1 + n2;
 
 		printf("%s", ", ");
-		printf("%llu", (long long unsigned) fibn);
+		printf("%ld", fibn);
 		n1 = n2;
 		n2 = fibn;
 		term++;
