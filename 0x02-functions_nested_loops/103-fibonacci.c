@@ -25,7 +25,7 @@ int main(void)
 		n2 = fibn;
 		term++;
 	};
-	printf("%ld%c", sum, '\n');
+	printf("%lld%c", (long long)(sum), '\n');
 	return (0);
 }
 
