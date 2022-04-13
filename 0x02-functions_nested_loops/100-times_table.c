@@ -4,18 +4,15 @@
  * print_times_table - prints the n times table, starting with 0.
  * @n: the table to print
  * Return: nothing
- */
-/**
+ *
  * printword - to reduce line in the function
  * @res - the argument used in printing
  * Return: nothing
- */
-/**
+ *
  * printword2 - to reduce line in my function
  * @res - the argument used un printing
  * Return: nothing
- */
-/**
+ *
  * printword3 - to reduce line in function
  * @res - the argument used in printf
  * Return: nothing
