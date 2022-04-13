@@ -3,7 +3,16 @@
 /**
  * print_times_table - prints the n times table, starting with 0.
  * @n: the table to print
- * Result: nothing
+ * Return: nothing
+ * printword - to reduce line in function
+ * @res - the argument used un printing
+ * Return: nothing
+ * printword2 - to reduce line in function
+ * @res - the argument used un printing
+ * Return: nothing
+ * printword3 - to reduce line in function
+ * @res - the argument used un printing
+ * Return: nothing
  */
 void printword(int res);
 void printword2(int res);
