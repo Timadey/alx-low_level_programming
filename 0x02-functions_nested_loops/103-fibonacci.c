@@ -16,6 +16,7 @@ int main(void)
 	while (term > 0)
 	{
 		long int fibn = n1 + n2;
+
 		if (fibn > 4000000)
 			break;
 		else if (fibn % 2 == 0)
