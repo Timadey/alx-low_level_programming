@@ -28,29 +28,11 @@ else
 		{
 			res = y * count;
 			if (res <= 9)
-			{
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
-			_putchar(' ');
-			_putchar (res + '0');
-			}
+				printword3(res);
 			else if (res > 99)
-			{
-			_putchar(',');
-			_putchar(' ');
-		_putchar(res / 100 + '0');
-			_putchar((res % 100) / 10 + '0');
-			_putchar((res % 100) % 10 + '0');
-			}
+				printword2(res);
 			else
-			{
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
-			_putchar(res / 10 + '0');
-			_putchar(res % 10 + '0');
-			};
+				printword(res);
 			if (y == n)
 				_putchar('\n');
 			y++;
@@ -61,3 +43,30 @@ else
 };
 }
 
+void printword(int res)
+{
+			_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(res / 10 + '0');
+			_putchar(res % 10 + '0');
+}
+void printword2(int res)
+{
+
+			_putchar(',');
+			_putchar(' ');
+		_putchar(res / 100 + '0');
+			_putchar((res % 100) / 10 + '0');
+			_putchar((res % 100) % 10 + '0');
+}
+
+void printword3(int res)
+{
+
+			_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar (res + '0');
+}
