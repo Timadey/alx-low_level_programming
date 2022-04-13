@@ -10,24 +10,20 @@ int main(void)
 {
 	long int n1 = 1;
 	long int n2 = 2;
-	long int sum = 0;
-	int term = 1;
+	int term = 0;
 
-	while (term > 0)
+	printf("%ld%s%ld", n1, ", ", n2);
+	while (term < 48)
 	{
 		long int fibn = n1 + n2;
-		if (fibn > 4000000)
-			break;
-		else
-		{
-			fibn % 2 == 0?sum = fibn + sum:;
-		};
 
-			n1 = n2;
-			n2 = fibn;
-			term++;
+		printf("%s", ", ");
+		printf("%ld", fibn);
+		n1 = n2;
+		n2 = fibn;
+		term++;
 	};
-	printf("%ld%c", sum, '\n');
+	printf("%c", '\n');
 	return (0);
 }
 
