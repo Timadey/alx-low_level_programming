@@ -18,14 +18,11 @@ int main(void)
 		long int fibn = n1 + n2;
 		if (fibn > 4000000)
 			break;
-		else
-		{
-			fibn % 2 == 0?sum = fibn + sum:;
-		};
-
-			n1 = n2;
-			n2 = fibn;
-			term++;
+		else if (fibn % 2 == 0)
+			sum = sum + fibn;
+		n1 = n2;
+		n2 = fibn;
+		term++;
 	};
 	printf("%ld%c", sum, '\n');
 	return (0);
