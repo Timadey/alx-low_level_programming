@@ -9,7 +9,7 @@ void printword(int res);
 void printword2(int res);
 void printword3(int res);
 
-void print_times_table(int n);
+void print_times_table(int n)
 
 {
 if (n > 15 || n < 0)
