@@ -20,7 +20,7 @@ void print_multiples(void)
 			n++;
 		};
 		printf("%d%c", sum, '\n');
-};
+}
 /**
  * main -starting point of program
  * Return: always 0
