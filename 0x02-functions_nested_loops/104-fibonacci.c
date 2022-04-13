@@ -19,7 +19,7 @@ int main(void)
 		long int fibn = n1 + n2;
 
 		printf("%s", ", ");
-		printf("%ld", fibn);
+		printf("%lu", fibn);
 		n1 = n2;
 		n2 = fibn;
 		term++;
