@@ -2,9 +2,9 @@
 #include <stdio.h>
 int main(void)
 {
-	printf("%d", 1);
 	int x = 2;
 
+	printf("%d", 1);
 	while (x <= 100)
 	{
 
