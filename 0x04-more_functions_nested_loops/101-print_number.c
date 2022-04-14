@@ -28,7 +28,7 @@ void print_number(int n)
 		};
 		while (num != 0)
 		{
-			_putchar(num /div + '0');
+			_putchar(num / div + '0');
 			num = num % div;
 			div = div / 10;
 			if (div == 1)
