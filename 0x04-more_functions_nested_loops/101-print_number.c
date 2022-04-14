@@ -14,7 +14,7 @@ void print_number(int n)
 	int div = 1;
 
 	if (nnum < 0)
-		_putchar(45);
+		_putchar('0' - 3);
 	if (num < 10 && num >= 0)
 	{
 		_putchar(num + '0');
