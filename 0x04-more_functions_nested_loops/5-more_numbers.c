@@ -4,6 +4,15 @@
  *  followed by a new line.
  *  Return: void
  */
+/**
+ * myput - alternative of _putchar
+ * @ch - character to print
+ * Return: void
+ */
+void myput(int ch)
+{
+	_putchar(ch);
+}
 void more_numbers(void)
 {
 	int x;
@@ -15,11 +24,11 @@ void more_numbers(void)
 		for (y = 0; y < 15; y++)
 		{
 			if (y < 9)
-				_putchar(y + '0');
+				myput(y + '0');
 			else
 			{
-				_putchar(y / 10 + '0');
-				_putchar(y % 10 + '0');
+				myput(y / 10 + '0');
+				myput(y % 10 + '0');
 			};
 		};
 		_putchar('\n');
