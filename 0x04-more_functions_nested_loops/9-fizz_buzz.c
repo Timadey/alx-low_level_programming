@@ -1,5 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * main - starting point of the program
+ * Return: 0
+ */
 int main(void)
 {
 	int x = 2;
