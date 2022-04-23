@@ -9,7 +9,7 @@
 char *cap_string(char *str)
 {
 	char *hold = str;
-	char sep[] = {32, 9, 10, 44, 58, 46, 33, 63, 34, 40, 41, 123, 125};
+	char sep[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 	int n = 0;
 	int len = strlen(sep);
 
