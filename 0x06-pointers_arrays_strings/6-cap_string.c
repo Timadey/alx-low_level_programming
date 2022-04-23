@@ -17,7 +17,7 @@ char *cap_string(char *str)
 	{
 		for (n = 0; n < len; n++)
 		{
-			if (*str == sep[n] && isalpha(*(str + 1)))
+			if (*str == sep[n] && *(str + 1) != '\0')
 			{
 				*(str + 1) = toupper(*(str + 1));
 			};
