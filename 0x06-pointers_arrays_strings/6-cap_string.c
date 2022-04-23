@@ -13,6 +13,9 @@ char *cap_string(char *str)
 	int n = 0;
 	int len = strlen(sep);
 
+	if (*(s + count) >= 97 && *(s + count) <= 122)
+		*str = toupper(*str);
+	str++;
 	while (*str != '\0')
 	{
 		for (n = 0; n < len; n++)
