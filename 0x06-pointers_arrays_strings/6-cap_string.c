@@ -19,6 +19,8 @@ char *cap_string(char *str)
 		{
 			if (*str == sep[n])
 			{
+				if (*str == '\t')
+					*str = ' ';
 				*(str + 1) = toupper(*(str + 1));
 			};
 		};
