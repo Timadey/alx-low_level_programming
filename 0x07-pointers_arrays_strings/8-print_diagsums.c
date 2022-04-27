@@ -8,11 +8,12 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, fir_diag, sec_diag = 0;
+	int i, fir_diag = 0;
+	int sec_diag = 0;
 
 	for (i = 0; i < size; i++)
 	{
-		fir_diag = fir_diag + (*(a + (size * i + i)));
+		fir_diag = fir_diag + *(a + (size * i + i));
 		sec_diag = sec_diag + (*(a + (size * i + size - 1 - i)));
 	};
 	printf("%d, %d\n", fir_diag, sec_diag);
