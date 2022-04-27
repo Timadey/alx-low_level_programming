@@ -4,6 +4,7 @@
  * @s: pointer to start filling bytes
  * @b: the constant byte to fill the first n byte with
  * @n: the first n bytes pointed to by s to fill with b
+ * Return: pointer to memory area s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
