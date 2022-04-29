@@ -18,7 +18,7 @@ void rev_str(char *t, char *s, int len, int ind)
 	};
 }
 /**
- * is_palidrome - checks if a string is palindrome
+ * is_palindrome - checks if a string is palindrome
  * @s: the pointer to the string
  * Return: 1 if string is palindrome and 0 if otherwise
  */
