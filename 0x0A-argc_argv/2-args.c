@@ -1,5 +1,12 @@
 #include <stdio.h>
-int main (int argc, char *argv[])
+/**
+ * main -Entry point
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: Always 0 (Success)
+ */
+int main(int argc, char *argv[])
 {
 	int i;
 
