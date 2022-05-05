@@ -39,11 +39,13 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (x = 0; x < ac; x++)
 	{
+		if (av[x] == NULL)
+			return (NULL);
 		len = strlen(av[x]);
 		for (y = 0; y <= len; y++)
 			size += 1;
 	};
-	concat = malloc((sizeof(char)) * size + 1);
+	concat = malloc((sizeof(char)) * (size + 1));
 	if (concat == NULL)
 	{
 		free(concat);
