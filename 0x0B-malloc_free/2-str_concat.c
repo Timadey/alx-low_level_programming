@@ -38,6 +38,8 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	size = strlen(s1) + strlen(s2);
 	concat = malloc((sizeof(char) * size + 1));
+	if (concat == NULL)
+		return (NULL);
 	append_to_string(index_ptr, concat, s1);
 	append_to_string(index_ptr, concat, s2);
 	*(concat + size) = '\0';
