@@ -15,10 +15,20 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	if (two_dim == NULL)
+	{
+		free(two_dim);
 		return (NULL);
+	};
 	for (x = 0; x < height; x++)
 	{
 		*(two_dim + x) = malloc((sizeof(int)) * width);
+		if (*(two_dim + x) == NULL)
+		{
+			for (x--; x >= 0; x--)
+				free(*(two_dim + x));
+			free(two_dim);
+			return (NULL);
+		}
 	};
 	for (x = 0; x < height; x++)
 	{
