@@ -32,18 +32,19 @@ void append_to_string(int *index, char *str1, char *str2)
 char *argstostr(int ac, char **av)
 {
 	char *concat;
-	int size, len, index, x, y;
+	int size, index, x, y;
 	int *index_ptr;
 
+	size = 0;
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (x = 0; x < ac; x++)
 	{
 		if (av[x] == NULL)
 			return (NULL);
-		len = strlen(av[x]);
-		for (y = 0; y <= len; y++)
+		for (y = 0; av[x][y] != '\0'; y++)
 			size += 1;
+		size += 1;
 	};
 	concat = malloc((sizeof(char)) * (size + 1));
 	if (concat == NULL)
