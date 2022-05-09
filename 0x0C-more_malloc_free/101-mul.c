@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 #include <stdio.h>
 /**
  * check_dig - check if a char is digit
@@ -33,7 +35,7 @@ int main(int argc, char *argv[])
 		printf("%s\n", "Error");
 		exit(98);
 	}
-	check_dig(argv[1], strlen(argv[1]);
-	check_dig(argv[2], strlen(argv[2]);
+	check_dig(argv[1], strlen(argv[1]));
+	check_dig(argv[2], strlen(argv[2]));
 	return (0);
 }
