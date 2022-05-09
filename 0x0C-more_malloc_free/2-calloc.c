@@ -7,12 +7,15 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *myarr;
+	char *myarr;
+	unsigned int i = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	myarr = malloc(nmemb * size);
 	if (myarr == NULL)
 		return (NULL);
+	for (; i < (nmemb * size); i++)
+		myarr[i] = 0;
 	return (myarr);
 }
