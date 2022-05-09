@@ -30,6 +30,8 @@ void check_dig(char *arr, int len)
  */
 int main(int argc, char *argv[])
 {
+	int mul;
+
 	if (argc != 3)
 	{
 		printf("%s\n", "Error");
@@ -37,5 +39,9 @@ int main(int argc, char *argv[])
 	}
 	check_dig(argv[1], strlen(argv[1]));
 	check_dig(argv[2], strlen(argv[2]));
+	mul = atoi(argv[1]) * atoi(argv[2]);
+
+	printf("%d\n", mul);
+
 	return (0);
 }
