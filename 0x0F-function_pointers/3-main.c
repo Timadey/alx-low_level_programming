@@ -18,8 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	};
-
-	if (strlen(argv[2]) != 1 || argv[2] == NULL)
+	if (argv[2][1])
 	{
 		printf("Error\n");
 		exit(99);
