@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
  * int_index - searches for an integer.
  * @array: poniter to array to search the integer
