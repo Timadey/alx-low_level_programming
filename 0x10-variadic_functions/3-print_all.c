@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	const char forms[] = "cifs";
 
 	va_start(param, format);
-	while (format[i])
+	while (format[i] && format)
 	{
 		x = 0;
 		while (forms[x])
@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 				{
 					printf("(nil)");
 					break;
-				};
+				}
 				printf("%s", str);
 				break;
 		} i++;
