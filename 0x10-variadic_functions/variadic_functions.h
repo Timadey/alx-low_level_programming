@@ -16,4 +16,8 @@ typedef struct form_skeleton
 	char a;
 	void (*print)(va_list);
 } forms;
+void p_int(va_list param);
+void p_double(va_list param);
+void p_string(va_list param);
+void p_char(va_list param);
 #endif
