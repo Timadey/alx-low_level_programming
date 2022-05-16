@@ -10,8 +10,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 1;
 	char *str;
-
 	va_list strings;
+
 	va_start(strings, n);
 	if (!separator)
 		return;
@@ -23,7 +23,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 		{
 			printf("%s", str);
-			if (i != n)
+			if (i < n && separator)
 				printf("%s", separator);
 		};
 		i++;
