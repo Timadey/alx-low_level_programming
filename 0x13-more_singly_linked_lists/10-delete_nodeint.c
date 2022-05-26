@@ -50,7 +50,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *delete_node;
 	unsigned int len = (unsigned int)listint_len(*head);
 
-	if (index > len - 1 || index < 0)
+	if (*head == NULL && index == 0)
+		return (-1);
+	if (index > len - 1)
 		return (-1);
 	delete_node = get_nodeint_at_index(*head, index);
 	previous_node = get_nodeint_at_index(*head, index - 1);
