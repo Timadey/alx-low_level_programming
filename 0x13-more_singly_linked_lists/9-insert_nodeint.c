@@ -51,7 +51,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *node_at_idx;
 	unsigned int len = (unsigned int)listint_len(*head);
 
-	if (*head == NULL)
+	if (*head == NULL && idx != 0)
 		return (NULL);
 	if (idx > len - 1)
 		return (NULL);
