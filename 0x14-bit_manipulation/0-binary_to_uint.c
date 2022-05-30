@@ -17,7 +17,7 @@ int pw(int base, int exp)
 	return (result);
 }
 /**
- * int binary_to_uint - converts a binary to an unsigned int
+ * binary_to_uint - converts a binary to an unsigned int
  * @b: the binary string to convert to integer
  * Return: the converted number, or 0 if there is one or more chars
  * in the string b that is not 0 or 1 or when b is null
