@@ -5,9 +5,10 @@
  * @exp: express
  * Return: the result
  */
-int pw (int base, int exp)
+int pw(int base, int exp)
 {
 	int result = 1;
+
 	while (exp)
 	{
 		result *= base;
