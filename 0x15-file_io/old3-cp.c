@@ -6,6 +6,26 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
+ * log_error - log error
+ * @file_from: file_from.
+ * @file_to: file_to.
+ * @argv: arguments vector.
+ * Return: no return.
+ */
+void log_error(int file_from, int file_to, char *argv)
+{
+	if (file_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv);
+		exit(98);
+	}
+	if (file_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv);
+		exit(99);
+	}
+} 
+/**
  * main - main entry of the program
  * @argc: argument count
  * @argv: argument vector
@@ -15,8 +35,8 @@ int main(int argc, char **argv)
 {
 	int file_to_fd;
 	int file_from_fd;
-	int r_file_from;
 	char *buf;
+	int byte = 1024;
 
 	if (argc != 3 || argv[0] == NULL || argv[1] == NULL)
 	{
@@ -34,19 +54,12 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 	buf = malloc(1024);
-	while ((r_file_from = read(file_from_fd, buf, 1024)) > 0)
+	while (byte == 1024)
 	{
-
+		if ((byte = read(file_from_fd, buf, 1024)) == -1)
+			log_error(-1, 0, argv[1]);
 		if(write(file_to_fd, buf, 1024) == -1)
-		{
-			dprintf(STDERR_FILENO, "Error Can't write to %s\n", argv[2]);
-			exit(99);
-		}
-	}
-	if (r_file_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error Can't read from  file %s\n", argv[1]);
-		exit(98);
+			log_error(0, -1, argv[2]);
 	}
 	free(buf);
 	if (close(file_to_fd) == -1)
