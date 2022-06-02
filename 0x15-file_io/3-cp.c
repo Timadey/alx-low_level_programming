@@ -1,5 +1,11 @@
 #include "main.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 
 /**
  * error_file - checks if files can be opened.
