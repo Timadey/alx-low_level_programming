@@ -19,5 +19,7 @@ int main(void)
     hash_table_set(ht, "serafins", "depravement");
     hash_table_set(ht, "joyful", "synaphea");
     hash_table_set(ht, "synaphea", "joyful");
+    hash_table_set(ht, "synaphea", "joyfullyone");
+    hash_table_set(ht, "synaphea", "arooooooooma");
     return (EXIT_SUCCESS);
 }
