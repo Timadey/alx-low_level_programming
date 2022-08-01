@@ -12,7 +12,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t **array;
-	hash_node_t *new_node;
 	hash_node_t *node;
 
 	if (ht == NULL || key == NULL || key[0] == '\0')
@@ -23,30 +22,45 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	array = ht->array;
 	index = key_index((const unsigned char *)key, ht->size);
 
-	new_node = malloc(sizeof(hash_node_t *));
-	if (new_node == NULL)
-		return (0);
-	new_node->key = strdup(key);
-	new_node->value = strdup(value);
-	new_node->next = NULL;
 	node = array[index];
 	if (node == NULL)
 	{
-		array[index] = new_node;
+		if ((array[index] = create_node(key, value)) ==  NULL)
+			return (0);
 		return (1);
 	}
 	while (node != NULL)
 	{
 		if (strcmp(key, node->key) == 0)
 		{
-			node->value = new_node->value;
-			free(new_node);
+			free(node->value);
+			node->value = strdup(value);
 			return (1);
 		}
 		node = node->next;
 	}
 	node = array[index];
-	array[index] = new_node;
-	new_node->next = node;
+	if ((array[index] = create_node(key, value)) == NULL)
+		return (0);
+	array[index]->next = node;
 	return (1);
+}
+
+/**
+ * create_node - creates a new node with the value provided
+ * @key: key of the node
+ * @value: value of the node
+ * Return: the new node created
+ */
+hash_node_t *create_node(const char *key, const char *value)
+{
+	hash_node_t *new_node = malloc(sizeof(hash_node_t *));
+
+	if (new_node == NULL)
+		return (NULL);
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = NULL;
+
+	return (new_node);
 }
