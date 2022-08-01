@@ -31,13 +31,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->value = strdup(value);
 	new_node->next = NULL;
 
-	if (array[index] == NULL)
+	node = array[index];
+	if (node == NULL)
 	{
 		array[index] = new_node;
 		return (1);
 	}
 	else
 	{
+		while (node != NULL)
+		{
+			if (strcmp(key, node->key) == 0)
+			{
+				node->value = new_node->value;
+				free(new_node);
+				return (1);
+			}
+			node = node->next;
+		}
 		node = array[index];
 		array[index] = new_node;
 		new_node->next = node;
