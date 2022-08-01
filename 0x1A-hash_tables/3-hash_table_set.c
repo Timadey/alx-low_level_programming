@@ -33,8 +33,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	node = array[index];
 	if (node == NULL)
+	{
 		array[index] = new_node;
 		return (1);
+	}
 	while (node != NULL)
 	{
 		if (strcmp(key, node->key) == 0)
